@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     timeline
         .from('.hero h1', { duration: 1, y: -50, opacity: 0, ease: 'power1.out' })
         .from('.hero p', { duration: 1, y: 50, opacity: 0, delay: 0.5, ease: 'power1.out' })
-        .from('.cta-button', { duration: 1, scale: 0, opacity: 0, delay: 0.5, ease: 'back.out(1.7)' })
+        .from('.cta-button', { duration: 1, scale: 0, opacity: 0, delay: 1, ease: 'back.out(1.7)' }) // Увеличили задержку до 1 секунды
         .from('.hero img', { duration: 1, scale: 0, opacity: 0, delay: 1.5, ease: 'power1.out' });
 
     // Анимация для features при прокрутке
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 trigger: feature,
                 start: 'top 80%',
                 toggleActions: 'play none none reverse',
-                onEnter: () => feature.classList.add('active'), // Подсветка активного элемента
+                onEnter: () => feature.classList.add('active'),
                 onLeave: () => feature.classList.remove('active'),
                 onEnterBack: () => feature.classList.add('active'),
                 onLeaveBack: () => feature.classList.remove('active')
