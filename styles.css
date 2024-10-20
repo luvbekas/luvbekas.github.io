@@ -1,0 +1,96 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    text-align: center;
+}
+
+.cta-button {
+    background-color: white;
+    color: #2575fc;
+    padding: 10px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    margin: 20px;
+}
+
+.cta-button:hover {
+    transform: scale(1.1);
+    background-color: #2575fc; 
+    color: white; 
+}
+
+.features-grid {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px;
+    flex-wrap: wrap; 
+}
+
+.feature-item {
+    background-color: #486cff;
+    color: rgb(227, 223, 223);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+    width: 30%; 
+    margin: 10px; 
+}
+
+.feature-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.footer-link {
+    color: #000000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin: 10px 0; 
+
+}
+.footer-link i {
+    margin-right: 8px; 
+    transition: color 0.3s; 
+
+}
+
+.footer-link:hover i {
+    color: #ffffff; 
+}
+
+.footer-link:nth-of-type(1) i {
+    color: #ffcc00; /*Gmail*/
+}
+
+.footer-link:nth-of-type(2) i {
+    color: #2ab0ff; /*Telegram*/
+}
+
+.footer-link:nth-of-type(3) i {
+    color: #c32aa3; /*Instagram*/
+}
+
+@media (max-width: 768px) {
+    .features-grid {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .feature-item {
+        width: 90%; 
+    }
+}
